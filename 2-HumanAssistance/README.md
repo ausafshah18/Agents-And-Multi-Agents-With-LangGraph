@@ -41,7 +41,7 @@ sequenceDiagram
     Agent->>Tool: Request assistance via human_assistance tool
     Tool->>Graph: interrupt({"query": "..."}) - Execution Paused
     Graph-->>User: Stream halts at interrupt state
-    Note over Graph,Expert: Execution suspended; State preserved in MemorySaver
+    Note over Graph,Expert: Execution suspended <br/> State preserved in MemorySaver
     Expert->>Graph: Provide input via Command(resume={"data": "..."})
     Graph->>Tool: Resume execution with human feedback
     Tool->>Agent: Return expert guidance

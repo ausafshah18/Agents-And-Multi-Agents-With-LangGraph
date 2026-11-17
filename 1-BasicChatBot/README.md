@@ -38,9 +38,9 @@ This module provides a progressive, step-by-step foundation in building conversa
 
 ```mermaid
 flowchart TD
-    START([START]) --> Chatbot[Chatbot / LLM Node]
-    Chatbot --> Condition{tools_condition}
-    Condition -- "Tool Call Requested" --> Tools[ToolNode: Tavily / Math]
+    START([START]) --> Chatbot["Chatbot / LLM Node"]
+    Chatbot --> Condition{"tools_condition"}
+    Condition -- "Tool Call Requested" --> Tools["ToolNode: Tavily / Math"]
     Tools --> Chatbot
     Condition -- "Final Response" --> END([END])
 ```

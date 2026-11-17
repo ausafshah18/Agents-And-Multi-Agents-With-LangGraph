@@ -32,9 +32,9 @@ This module focuses on **observability, tracing, and visual debugging** of LangG
 
 ```mermaid
 flowchart TD
-    START([START]) --> ToolCallingLLM[tool_calling_llm Node]
-    ToolCallingLLM --> Condition{tools_condition}
-    Condition -- "Tool Call (add)" --> Tools[tools: ToolNode]
+    START([START]) --> ToolCallingLLM["tool_calling_llm Node"]
+    ToolCallingLLM --> Condition{"tools_condition"}
+    Condition -- "Tool Call (add)" --> Tools["tools: ToolNode"]
     Tools --> ToolCallingLLM
     Condition -- "No Tool Call / Completed" --> END([END])
 ```

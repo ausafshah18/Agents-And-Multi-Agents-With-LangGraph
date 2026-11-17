@@ -12,8 +12,8 @@ In the sequential workflow, specialist agents execute their tasks in a linear ha
 
 ```mermaid
 flowchart LR
-    START([START]) --> Researcher[Researcher Agent<br/>(ReAct + Tavily Web Search)]
-    Researcher --> Writer[Writer Agent<br/>(Synthesis & Executive Summary)]
+    START([START]) --> Researcher["Researcher Agent<br/>(ReAct + Tavily Web Search)"]
+    Researcher --> Writer["Writer Agent<br/>(Synthesis & Executive Summary)"]
     Writer --> END([END])
 ```
 
@@ -30,13 +30,13 @@ In the supervisor-managed workflow, a centralized **Supervisor Agent** dynamical
 
 ```mermaid
 flowchart TD
-    START([START]) --> Supervisor[Supervisor Agent<br/>Decision Chain]
+    START([START]) --> Supervisor["Supervisor Agent<br/>Decision Chain"]
     
-    Supervisor --> Router{Router Function}
+    Supervisor --> Router{"Router Function"}
     
-    Router -- "assigns task" --> Researcher[Researcher Agent<br/>Fact & Trend Gathering]
-    Router -- "assigns task" --> Analyst[Analyst Agent<br/>Pattern & Risk Analysis]
-    Router -- "assigns task" --> Writer[Writer Agent<br/>Executive Report Compilation]
+    Router -- "assigns task" --> Researcher["Researcher Agent<br/>Fact & Trend Gathering"]
+    Router -- "assigns task" --> Analyst["Analyst Agent<br/>Pattern & Risk Analysis"]
+    Router -- "assigns task" --> Writer["Writer Agent<br/>Executive Report Compilation"]
     
     Researcher -- "returns research_data" --> Supervisor
     Analyst -- "returns analysis" --> Supervisor
